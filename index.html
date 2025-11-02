@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooumi-generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🐋 ooumi-generator</h1>
+    <p>データを入力してAIに最適な攻略法を生成させましょう</p>
+    
+    <!-- データ入力フォーム -->
+    <div class="input-section">
+        <h2>📊 実戦データ入力</h2>
+        
+        <div class="input-grid">
+            <div class="input-group">
+                <label for="currentRotation">現在の回転数</label>
+                <input type="number" id="currentRotation" min="0" max="9999" value="0" placeholder="例: 350">
+                <span class="unit">回転</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="todayBigWin">本日の大当り回数</label>
+                <input type="number" id="todayBigWin" min="0" value="0" placeholder="例: 5">
+                <span class="unit">回</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="topNumber">上段の先頭出目</label>
+                <select id="topNumber">
+                    <option value="">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="middleNumber">中段の先頭出目</label>
+                <select id="middleNumber">
+                    <option value="">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="裏サメ">裏サメ</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="bottomNumber">下段の先頭出目</label>
+                <select id="bottomNumber">
+                    <option value="">選択してください</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="areaPosition">集中領域の位置</label>
+                <select id="areaPosition">
+                    <option value="">選択してください</option>
+                    <option value="1時">1時</option>
+                    <option value="2時">2時</option>
+                    <option value="3時">3時</option>
+                    <option value="4時">4時</option>
+                    <option value="5時">5時</option>
+                    <option value="6時">6時</option>
+                    <option value="7時">7時</option>
+                    <option value="8時">8時</option>
+                    <option value="9時">9時</option>
+                    <option value="10時">10時</option>
+                    <option value="11時">11時</option>
+                    <option value="12時">12時</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="button-group">
+        <button id="generateBtn">🤖 AIで攻略法を生成</button>
+        <button id="copyBtn" disabled>📋 コピー</button>
+    </div>
+    
+    <div id="result">データを入力して生成ボタンを押してください</div>
+    
+    <div id="status"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
